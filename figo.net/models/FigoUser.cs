@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figo.Models {
+namespace Figo.Models
+{
     [JsonObject]
-    public class FigoUser {
+    public class FigoUser
+    {
         /// <summary>
         /// Internal figo Connect user ID
         /// </summary>

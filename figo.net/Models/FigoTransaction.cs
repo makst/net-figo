@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figo.Models {
+namespace Figo.Models
+{
     /// <summary>
     /// Object representing one bank transaction on a certain bank account of the user
     /// </summary>
     [JsonObject]
-    public class FigoTransaction {
+    public class FigoTransaction
+    {
         /// <summary>
         /// Internal figo Connect transaction ID
         /// </summary>
@@ -113,7 +115,8 @@ namespace Figo.Models {
         /// Helper type to represent the actual answer from the figo API
         /// </summary>
         [JsonObject]
-        internal class TransactionsResponse {
+        internal class TransactionsResponse
+        {
             /// <summary>
             /// List of transactions asked for
             /// </summary>

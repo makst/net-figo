@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figo.Models {
+namespace Figo.Models
+{
     /// <summary>
     /// Object representing a payment the user made via figo
     /// </summary>
     [JsonObject]
-    public class FigoPayment {
+    public class FigoPayment
+    {
         /// <summary>
         /// Internal figo Connect payment ID
         /// </summary>
@@ -112,7 +114,8 @@ namespace Figo.Models {
         /// <summary>
         /// Helper type to match actual response from figo API
         /// </summary>
-        internal class PaymentsResponse {
+        internal class PaymentsResponse
+        {
             /// <summary>
             /// List of payments asked for
             /// </summary>

@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figo.Models {
+namespace Figo.Models
+{
     /// <summary>
     /// Object representing a configured notification, e.g a webhook or email hook
     /// </summary>
     [JsonObject]
-    public class FigoNotification {
+    public class FigoNotification
+    {
         /// <summary>
         /// Internal figo Connect notification ID from the notification registration response
         /// </summary>
@@ -39,7 +41,8 @@ namespace Figo.Models {
         /// <summary>
         /// Helper type to match actual response from figo API
         /// </summary>
-        internal class NotificationsResponse {
+        internal class NotificationsResponse
+        {
             /// <summary>
             /// List of notifications asked for
             /// </summary>

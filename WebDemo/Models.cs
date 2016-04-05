@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text;
 using Figo.Models;
 
-namespace WebDemo.models {
-    public class IndexModel {
+namespace WebDemo.models
+{
+    public class IndexModel
+    {
         public FigoUser User { get; set; }
         public FigoAccount CurrentAccount { get; set; }
         public FigoAccountBalance CurrentAccountBalance { get; set; }

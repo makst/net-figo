@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figo.Models {
+namespace Figo.Models
+{
     /// <summary>
     /// Object representing a Bank
     /// </summary>
     [JsonObject]
-    public class FigoBank {
+    public class FigoBank
+    {
         /// <summary>
         /// Internal figo Connect bank ID
         /// </summary>

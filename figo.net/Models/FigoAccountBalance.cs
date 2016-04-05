@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figo.Models {
+namespace Figo.Models
+{
     /// <summary>
     /// Object representing the balance of a certain bank account of the user
     /// </summary>
     [JsonObject]
-    public class FigoAccountBalance {
+    public class FigoAccountBalance
+    {
         /// <summary>
         /// Account balance or null if the balance is not yet known
         /// </summary>

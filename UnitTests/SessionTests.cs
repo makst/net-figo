@@ -5,18 +5,22 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Figo.Models;
 
-namespace UnitTests {
+namespace UnitTests
+{
     [TestClass]
-    public class SessionTests {
+    public class SessionTests
+    {
         private FigoSession sut = null;
 
         [TestInitialize]
-        public void SetUp() {
+        public void SetUp()
+        {
             sut = new FigoSession { AccessToken = "ASHWLIkouP2O6_bgA2wWReRhletgWKHYjLqDaqb0LFfamim9RjexTo22ujRIP_cjLiRiSyQXyt2kM1eXU2XLFZQ0Hro15HikJQT_eNeT_9XQ" };
         }
 
         [TestMethod]
-        public void testGetAccount() {
+        public void testGetAccount()
+        {
             Task<FigoAccount> task_a = sut.GetAccount("A1.2");
             FigoAccount a = task_a.Result;
             Assert.AreEqual("A1.2", a.AccountId);
@@ -35,7 +39,8 @@ namespace UnitTests {
         }
 
         [TestMethod]
-        public void testGetTransactions() {
+        public void testGetTransactions()
+        {
             Task<List<FigoTransaction>> task_a = sut.GetTransactions();
             task_a.Wait();
             List<FigoTransaction> transactions = task_a.Result;
@@ -43,7 +48,8 @@ namespace UnitTests {
         }
 
         [TestMethod]
-        public void testGetNotifications() {
+        public void testGetNotifications()
+        {
             Task<List<FigoNotification>> task_a = sut.GetNotifications();
             task_a.Wait();
             List<FigoNotification> notifications = task_a.Result;
@@ -51,7 +57,8 @@ namespace UnitTests {
         }
 
         [TestMethod]
-        public void testGetPayments() {
+        public void testGetPayments()
+        {
             Task<List<FigoPayment>> task_a = sut.GetPayments();
             task_a.Wait();
             List<FigoPayment> payments = task_a.Result;
@@ -59,39 +66,47 @@ namespace UnitTests {
         }
 
         [TestMethod]
-        public void testMissingHandling() {
+        public void testMissingHandling()
+        {
             var task_a = sut.GetAccount("A1.5");
             task_a.Wait();
             Assert.IsNull(task_a.Result);
-	    }
+        }
 
         [TestMethod]
-        public void testErrorHandling() {
-            try {
+        public void testErrorHandling()
+        {
+            try
+            {
                 Task<string> task_a = sut.GetSyncTaskToken("", "http://localhost:3003/");
                 task_a.Wait();
                 Assert.Fail("No exception encountered, bad");
-            } catch(Exception exc) {
+            }
+            catch (Exception exc)
+            {
                 Assert.IsInstanceOfType(exc.InnerException, typeof(FigoException));
             }
         }
 
         [TestMethod]
-        public void testGetSync() {
+        public void testGetSync()
+        {
             Task<string> task_a = sut.GetSyncTaskToken("test", "http://localhost:3000/callback");
             task_a.Wait();
             Assert.IsNotNull(task_a.Result);
         }
 
         [TestMethod]
-        public void testUser() {
+        public void testUser()
+        {
             Task<FigoUser> task_a = sut.GetUser();
             task_a.Wait();
             Assert.AreEqual("demo@figo.me", task_a.Result.Email);
         }
 
         [TestMethod]
-        public void testCreateUpdateDeleteNotification() {
+        public void testCreateUpdateDeleteNotification()
+        {
             FigoNotification notification = new FigoNotification { ObserveKey = "/rest/transactions", NotifyURI = "http://figo.me/test", State = "qwe" };
             Task<FigoNotification> task_add = sut.AddNotification(notification);
             task_add.Wait();
@@ -110,21 +125,22 @@ namespace UnitTests {
             task_get.Wait();
             FigoNotification updatedNotification = task_get.Result;
             Assert.IsNotNull(updatedNotification);
-		    Assert.AreEqual(addedNotification.NotificationId, updatedNotification.NotificationId);
-		    Assert.AreEqual("/rest/transactions", updatedNotification.ObserveKey);
-		    Assert.AreEqual("http://figo.me/test", updatedNotification.NotifyURI);
-		    Assert.AreEqual("asd", updatedNotification.State);
+            Assert.AreEqual(addedNotification.NotificationId, updatedNotification.NotificationId);
+            Assert.AreEqual("/rest/transactions", updatedNotification.ObserveKey);
+            Assert.AreEqual("http://figo.me/test", updatedNotification.NotifyURI);
+            Assert.AreEqual("asd", updatedNotification.State);
 
-		    Task<bool> task_delete = sut.RemoveNotification(updatedNotification);
+            Task<bool> task_delete = sut.RemoveNotification(updatedNotification);
             task_delete.Wait();
 
             Task<FigoNotification> task_test = sut.GetNotification(addedNotification.NotificationId);
             task_test.Wait();
             Assert.IsNull(task_test.Result);
-	    }
+        }
 
         [TestMethod]
-        public void testCreateUpdateDeletePayment() {
+        public void testCreateUpdateDeletePayment()
+        {
             FigoPayment payment = new FigoPayment { Type = "Transfer", AccountNumber = "4711951501", BankCode = "90090042", Name = "figo", Purpose = "Thanks for all the fish.", Amount = 0.89F };
             Task<FigoPayment> task_add = sut.AddPayment("A1.1", payment);
             task_add.Wait();

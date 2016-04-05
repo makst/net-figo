@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figo.Models {
+namespace Figo.Models
+{
     /// <summary>
     /// Object representing one bank account of the user, independent of the exact account type
     /// </summary>
     [JsonObject]
-    public class FigoAccount {
+    public class FigoAccount
+    {
         /// <summary>
         /// Internal figo Connect account ID
         /// </summary>
@@ -122,7 +124,8 @@ namespace Figo.Models {
         /// Helper type to match actual response from figo API
         /// </summary>
         [JsonObject]
-        internal class FigoAccountsResponse {
+        internal class FigoAccountsResponse
+        {
             /// <summary>
             /// List of accounts asked for
             /// </summary>

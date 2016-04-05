@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figo.Models {
+namespace Figo.Models
+{
     [JsonObject]
-    public class TokenResponse {
+    public class TokenResponse
+    {
         /// <summary>
         /// The access token
         /// </summary>

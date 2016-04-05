@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace Figo.Internal
 {
     [JsonObject]
-    internal class AuthenticationCodeTokenRequest {
+    internal class AuthenticationCodeTokenRequest
+    {
         [JsonProperty("grant_type")]
         public string GrantType { get { return "authorization_code"; } }
 
@@ -20,7 +21,8 @@ namespace Figo.Internal
     }
 
     [JsonObject]
-    internal class RefreshTokenTokenRequest {
+    internal class RefreshTokenTokenRequest
+    {
         [JsonProperty("grant_type")]
         public string GrantType { get { return "refresh_token"; } }
 
@@ -32,7 +34,8 @@ namespace Figo.Internal
     }
 
     [JsonObject]
-    internal class PasswordTokenRequest {
+    internal class PasswordTokenRequest
+    {
         [JsonProperty("grant_type")]
         public string GrantType { get; set; }
 
