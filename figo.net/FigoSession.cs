@@ -8,6 +8,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Figo.Models;
 using Figo.Internal;
+using Figo.Exceptions;
 
 namespace Figo
 {
@@ -54,14 +55,11 @@ namespace Figo
 
         protected async Task<String> DoRequest(string endpoint, string method = "GET", string body = null)
         {
-            WebRequest req = (WebRequest)WebRequest.Create(ApiEndpoint + endpoint);
+            var req = WebRequest.CreateHttp(ApiEndpoint + endpoint);
             req.Method = method;
             req.Headers["Authorization"] = "Bearer " + AccessToken;
-            if (req is HttpWebRequest)
-            {
-                ((HttpWebRequest)req).ContinueTimeout = Timeout;
-                ((HttpWebRequest)req).Accept = "application/json";
-            }
+            req.ContinueTimeout = Timeout;
+            req.Accept = "application/json";
 
             if (body != null)
             {
