@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "figo.net", "figo.net\figo.net.csproj", "{36ECC312-BB12-459F-A8B3-EFE72095A1ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figo.net", "figo.net\Figo.net.csproj", "{36ECC312-BB12-459F-A8B3-EFE72095A1ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDemo", "ConsoleDemo\ConsoleDemo.csproj", "{1AEF8075-521A-4B84-9F80-11B6A42A8219}"
 	ProjectSection(ProjectDependencies) = postProject
