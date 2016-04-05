@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figo
+namespace Figo.Exceptions
 {
     public class FigoException : Exception
     {

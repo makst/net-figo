@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="FigoConnection.cs" />
-    <Compile Include="FigoException.cs" />
+    <Compile Include="Exceptions\FigoException.cs" />
     <Compile Include="FigoSession.cs" />
     <Compile Include="Internal\AuthenticationCodeTokenRequest.cs" />
     <Compile Include="Internal\RefreshTokenTokenRequest.cs" />
