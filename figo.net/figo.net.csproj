@@ -8,8 +8,8 @@
     <ProjectGuid>{36ECC312-BB12-459F-A8B3-EFE72095A1ED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>figo</RootNamespace>
-    <AssemblyName>figo</AssemblyName>
+    <RootNamespace>Figo</RootNamespace>
+    <AssemblyName>Figo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -38,8 +38,11 @@
     <Compile Include="FigoConnection.cs" />
     <Compile Include="FigoException.cs" />
     <Compile Include="FigoSession.cs" />
-    <Compile Include="Internal\SyncToken.cs" />
-    <Compile Include="Internal\TokenRequest.cs" />
+    <Compile Include="Internal\AuthenticationCodeTokenRequest.cs" />
+    <Compile Include="Internal\RefreshTokenTokenRequest.cs" />
+    <Compile Include="Internal\SyncTokenRequest.cs" />
+    <Compile Include="Internal\TaskTokenResponse.cs" />
+    <Compile Include="Internal\PasswordTokenRequest.cs" />
     <Compile Include="Models\FigoAccount.cs" />
     <Compile Include="Models\FigoAccountBalance.cs" />
     <Compile Include="Models\FigoBank.cs" />

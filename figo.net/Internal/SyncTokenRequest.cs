@@ -22,14 +22,4 @@ namespace Figo.Internal
         [JsonProperty("redirect_uri")]
         public String RedirectURI { get; set; }
     }
-
-    [JsonObject]
-    class TaskTokenResponse
-    {
-        /// <summary>
-        /// Task token
-        /// </summary>
-        [JsonProperty("task_token")]
-        public String TaskToken { get; set; }
-    }
 }
