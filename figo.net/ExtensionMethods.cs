@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace figo {
+namespace Figo {
     public static class ExtensionMethods {
         public static string GetResponseAsString(this WebResponse response) {
             using(StreamReader sr = new StreamReader(response.GetResponseStream(), Encoding.UTF8)) {

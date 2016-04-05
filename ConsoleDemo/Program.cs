@@ -1,11 +1,12 @@
-﻿using figo;
+﻿using Figo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Figo.Models;
 
-namespace figo.ConsoleDemo {
+namespace Figo.ConsoleDemo {
     class Program {
         static void Main(string[] args)  {
             FigoSession session = new FigoSession { AccessToken = "ASHWLIkouP2O6_bgA2wWReRhletgWKHYjLqDaqb0LFfamim9RjexTo22ujRIP_cjLiRiSyQXyt2kM1eXU2XLFZQ0Hro15HikJQT_eNeT_9XQ" };

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace figo {
+namespace Figo.Models {
     /// <summary>
     /// Object representing one bank account of the user, independent of the exact account type
     /// </summary>

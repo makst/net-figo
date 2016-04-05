@@ -1,5 +1,6 @@
 ﻿namespace WebDemo {
-    using figo;
+    using Figo;
+    using Figo.Models;
     using Nancy;
     using System;
 

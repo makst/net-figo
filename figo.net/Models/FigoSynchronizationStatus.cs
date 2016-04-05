@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace figo {
+namespace Figo.Models {
     /// <summary>
     /// Represents the status of the synchonisation between figo and the bank servers
     /// </summary>

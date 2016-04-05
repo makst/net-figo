@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Net;
 using System.Threading.Tasks;
-using figo.models;
+using Figo.Models;
+using Figo.Internal;
 
-namespace figo
+namespace Figo
 {
     public class FigoSession {
         /// <summary>

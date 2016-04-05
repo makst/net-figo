@@ -89,9 +89,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\figo.net\figo.net.csproj">
+    <ProjectReference Include="..\figo.net\Figo.net.csproj">
       <Project>{36ecc312-bb12-459f-a8b3-efe72095a1ed}</Project>
-      <Name>figo.net</Name>
+      <Name>Figo.net</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

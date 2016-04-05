@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace figo {
+namespace Figo {
     public class FigoException : Exception {
         public FigoException(String error_code, String error_message) : base(error_message) {
             this.ErrorCode = error_code;

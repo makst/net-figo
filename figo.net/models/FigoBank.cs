@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace figo.models {
+namespace Figo.Models {
     /// <summary>
     /// Object representing a Bank
     /// </summary>

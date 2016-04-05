@@ -1,8 +1,9 @@
-﻿using figo;
+﻿using Figo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Figo.Models;
 
 namespace WebDemo.models {
     public class IndexModel {

@@ -5,8 +5,10 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Figo.Internal;
+using Figo.Models;
 
-namespace figo {
+namespace Figo {
     public class FigoConnection {
         /// <summary>
         /// figo API endpoint to use. This should only be changed when using a custom figo deployment.
