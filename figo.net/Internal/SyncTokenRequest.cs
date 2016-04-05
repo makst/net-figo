@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Figo.Internal
 {
     [JsonObject]
-    class SyncTokenRequest
+    internal class SyncTokenRequest
     {
         /// <summary>
         /// Any kind of string that will be forwarded in the callback response message. It serves two purposes: The value is used to maintain state between this request and the callback, e.g. it might contain a session ID from your application. The value should also contain a random component, which your application checks to mitigate cross-site request forgery.

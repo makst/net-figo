@@ -110,24 +110,5 @@ namespace Figo.Models
         [JsonProperty("booked")]
         public bool IsBooked { get; set; }
         public bool ShouldSerializeIsBooked() { return false; }
-
-        /// <summary>
-        /// Helper type to represent the actual answer from the figo API
-        /// </summary>
-        [JsonObject]
-        internal class TransactionsResponse
-        {
-            /// <summary>
-            /// List of transactions asked for
-            /// </summary>
-            [JsonProperty("transactions")]
-            public List<FigoTransaction> Transactions { get; set; }
-
-            /// <summary>
-            /// Synchronization status between figo and bank servers
-            /// </summary>
-            [JsonProperty("status")]
-            public FigoSynchronizationStatus Status { get; set; }
-        }
     }
 }

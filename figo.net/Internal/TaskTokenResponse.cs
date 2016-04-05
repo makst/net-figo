@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Figo.Internal
 {
     [JsonObject]
-    class TaskTokenResponse
+    internal class TaskTokenResponse
     {
         /// <summary>
         /// Task token

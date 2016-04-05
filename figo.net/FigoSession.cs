@@ -327,7 +327,7 @@ namespace Figo
                 sb.Append(WebUtility.UrlEncode(since));
             }
 
-            FigoTransaction.TransactionsResponse response = await this.DoRequest<FigoTransaction.TransactionsResponse>(sb.ToString());
+            TransactionsResponse response = await this.DoRequest<TransactionsResponse>(sb.ToString());
             return response == null ? null : response.Transactions;
         }
 

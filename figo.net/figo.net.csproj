@@ -43,6 +43,7 @@
     <Compile Include="Internal\SyncTokenRequest.cs" />
     <Compile Include="Internal\TaskTokenResponse.cs" />
     <Compile Include="Internal\PasswordTokenRequest.cs" />
+    <Compile Include="Internal\TransactionsResponse.cs" />
     <Compile Include="Models\FigoAccount.cs" />
     <Compile Include="Models\FigoAccountBalance.cs" />
     <Compile Include="Models\FigoBank.cs" />
